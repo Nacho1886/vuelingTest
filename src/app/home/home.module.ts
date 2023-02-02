@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+
+import { ButtonModule } from 'primeng/button';
+
 import { HomeComponent } from './home.component';
-import { PrimengModule } from '../shared/primeng/primeng.module';
 import { LoaderButtonComponent } from './loader-button/loader-button.component';
 import { PicturesBodyComponent } from './pictures-body/pictures-body.component';
 import { PictureCardComponent } from './pictures-body/components/picture-card/picture-card.component';
@@ -16,7 +19,7 @@ import { PictureCardComponent } from './pictures-body/components/picture-card/pi
   ],
   imports: [
     CommonModule,
-    PrimengModule
+    ButtonModule
   ]
 })
 export class HomeModule { }
