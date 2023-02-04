@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
-import { ButtonModule } from 'primeng/button';
-
 import { HomeComponent } from './home.component';
 import { LoaderButtonComponent } from './loader-button/loader-button.component';
 import { PicturesBodyComponent } from './pictures-body/pictures-body.component';
 import { PictureCardComponent } from './pictures-body/components/picture-card/picture-card.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +17,7 @@ import { PictureCardComponent } from './pictures-body/components/picture-card/pi
   ],
   imports: [
     CommonModule,
-    ButtonModule
+    SharedModule
   ]
 })
 export class HomeModule { }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { UnspashApiService } from '../services/unspash-api.service';
+import { PictureData } from '../interfaces/picture-data';
 
 @Component({
   selector: 'app-pictures-body',
@@ -8,10 +9,15 @@ import { UnspashApiService } from '../services/unspash-api.service';
   styleUrls: ['./pictures-body.component.scss']
 })
 export class PicturesBodyComponent implements OnInit {
+
+  // pictureArray: PictureData[] = []
+  pictureArray: any[] = []
   
-  constructor(private unsplashService: UnspashApiService) {}
+  constructor(private unsplashService: UnspashApiService) {
+    this.pictureArray.length = 10
+  }
   
   ngOnInit(): void {
-    this.unsplashService.getPageUnsplash().subscribe(obs => console.log(obs))
+    // this.unsplashService.getPageUnsplash().subscribe(obs => this.pictureArray = obs)
   }
 }

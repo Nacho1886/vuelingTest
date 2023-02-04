@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiResponse } from '../interfaces/api-response';
+import { PictureData } from '../interfaces/picture-data';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class UnspashApiService {
   constructor(private http: HttpClient) {
     
   }
-  getPageUnsplash(): Observable<ApiResponse> {
+  getPageUnsplash(): Observable<PictureData[]> {
 
     const randomNumber = Math.round(Math.random() * 400)
     const options = {
@@ -20,6 +20,6 @@ export class UnspashApiService {
       }
     }
 
-    return this.http.get<ApiResponse>(`https://api.unsplash.com/photos?page=${randomNumber}`, options)
+    return this.http.get<PictureData[]>(`https://api.unsplash.com/photos?page=${randomNumber}`, options)
   }
 }

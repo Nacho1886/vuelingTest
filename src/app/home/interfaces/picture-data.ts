@@ -1,6 +1,6 @@
 
 
-export interface ApiResponse {
+export interface PictureData {
     id: string;
     created_at: string;
     updated_at: string;
