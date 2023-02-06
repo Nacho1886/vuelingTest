@@ -1,5 +1,5 @@
-<div class="grid" *ngIf="pictureArray.length > 0; else loading">
-    <app-picture-card class="col-4" *ngFor="let picture of pictureArray" [picture]="picture"></app-picture-card>
+<div class="grid-wrapper" *ngIf="pictureArray.length > 0; else loading">
+    <app-picture-card class="formatCard" *ngFor="let picture of pictureArray" [picture]="picture"></app-picture-card>
 </div>
 <ng-template #loading>
     <app-loading></app-loading>
