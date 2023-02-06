@@ -11,11 +11,8 @@ import { PictureData } from '../interfaces/picture-data';
 export class PicturesBodyComponent implements OnInit {
 
   pictureArray: PictureData[] = []
-  // pictureArray: any[] = []
   
-  constructor(private unsplashService: UnspashApiService) {
-    // this.pictureArray.length = 10
-  }
+  constructor(private unsplashService: UnspashApiService) {}
   
   ngOnInit(): void {
     this.unsplashService.getPageUnsplash().subscribe(obs => this.pictureArray = obs)
