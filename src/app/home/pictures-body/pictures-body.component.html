@@ -1,5 +1,7 @@
 <div class="container" *ngIf="pictureArray.length > 0; else loading">
-    <app-picture-card class="formatCard mb-3" *ngFor="let picture of pictureArray" [picture]="picture"></app-picture-card>
+    <app-picture-card class="formatCard mb-3 border-round-lg shadow-5" 
+        *ngFor="let picture of pictureArray; index as i;" classDistributor [index]="i" [picture]="picture">
+    </app-picture-card>
 </div>
 <ng-template #loading>
     <app-loading></app-loading>

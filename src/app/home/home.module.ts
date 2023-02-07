@@ -6,6 +6,7 @@ import { LoaderButtonComponent } from './loader-button/loader-button.component';
 import { PicturesBodyComponent } from './pictures-body/pictures-body.component';
 import { PictureCardComponent } from './pictures-body/components/picture-card/picture-card.component';
 import { SharedModule } from '../shared/shared.module';
+import { ClassDistributorDirective } from './directives/class-distributor.directive';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SharedModule } from '../shared/shared.module';
     HomeComponent,
     LoaderButtonComponent,
     PicturesBodyComponent,
-    PictureCardComponent
+    PictureCardComponent,
+    ClassDistributorDirective
   ],
   imports: [
     CommonModule,

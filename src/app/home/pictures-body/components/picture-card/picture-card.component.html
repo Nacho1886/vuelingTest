@@ -1,9 +1,11 @@
-<article class="flex">
-        <img class="border-round-lg shadow-5 w-full" [src]="picture.urls.thumb">
-        <!-- <img class="border-round-md shadow-5 relative" src="../../../../../assets/photo-1670272502246-768d249768ca.jpeg"> -->
-        <h4 class="">
-            <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. -->
-            <!-- {{picture.alt_description}} -->
-        </h4>
+<article class="flex justify-content-end relative">
+        <img class="w-full h-auto" [src]="picture.urls.thumb">
+        <div class="absolute bottom-0 text-white mx-2">
+            <h4>
+                {{picture.user.name}}
+            </h4>
+            <h5>
+                {{picture.alt_description}}
+            </h5>
+        </div>
 </article>
-<!-- [ngStyle]="{'background-image': 'url(../../../../../assets/photo-1670272502246-768d249768ca.jpeg)'}" -->
