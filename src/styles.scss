@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap';
+
+body {
+    font-family: 'Rubik';
+}
+
+h4 {
+    font-weight: 600;
+}
+
+h5 {
+    font-weight: 400;
+}
+
 .size1 {
     height: 338px;
 }

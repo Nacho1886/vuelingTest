@@ -1,11 +1,13 @@
-<article class="flex relative">
-        <img classDistributor [index]="numberForClass" class="w-full  mb-3 border-round-lg shadow-5" [src]="picture.urls.small">
-        <div class="absolute bottom-0 text-white mx-2">
-            <h4 class="m-0">
-                {{picture.user.name}}
-            </h4>
-            <h5 class="mt-0">
-                {{picture.alt_description}}
-            </h5>
+<article class="flex relative mt-3 overflow-hidden border-round-lg shadow-5">
+        <img classDistributor [index]="numberForClass" class="w-full" [alt]="picture.alt_description" [src]="picture.urls.small">
+        <div class="absolute w-full bottom-0 text-white bgDeg">
+            <div>
+                <h4 class="m-2">
+                    {{picture.user.name}}
+                </h4>
+                <h5 class="m-2">
+                    {{picture.alt_description}}
+                </h5>
+            </div>
         </div>
 </article>
