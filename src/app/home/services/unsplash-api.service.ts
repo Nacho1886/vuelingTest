@@ -3,19 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 
 import { PictureData } from '../interfaces/picture-data';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UnsplashApiService {
-
-  private _apiUrl:string = 'https://api.unsplash.com/photos/';
-
-  private _options: object = {
-    headers: {
-      Authorization: 'Client-ID KfHoL6jNCXagd2FKrfo5LECINgGoAupSjzzhKc3P-i8',
-    },
-  };
 
   private _randomArray$: Subject<PictureData[]> = new Subject()
 
@@ -24,7 +17,7 @@ export class UnsplashApiService {
 
   getPageUnsplash(): void {
     this._randomArray$.next([])
-    this.http.get<PictureData[]>(`${this._apiUrl}random?count=12`, this._options).subscribe(array => this._randomArray$.next(array));
+    this.http.get<PictureData[]>(`${environment.URL_API_UNSPLASH}random?count=12`, environment.OPTIONS_API_UNSPLASH).subscribe(array => this._randomArray$.next(array));
   }
 
   getArrayPictures(): Observable<PictureData[]> {

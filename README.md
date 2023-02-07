@@ -1,27 +1,27 @@
-# VuelingTest
+# Readme - Vueling Hackathon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+Este proyecto es una prueba técnica para la hackathon de Vueling y ha sido desarrollado con las siguientes tecnologías:
+- Angular 15 como plataforma principal
+- Primeng para componentes y estilos
+- Primeicons para la librería de iconos
+- Primeflex para la creación de la estructura de la app
 
-## Development server
+## Instalación
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para levantar el proyecto, es necesario tener Angular Cli instalado de manera global:
+```
+npm install -g @angular/cli
+```
+Luego, ejecutar el siguiente comando:
+```
+ng serve -o
+```
+La aplicación se abrirá en el puerto http://localhost:4200/.
 
-## Code scaffolding
+## Estructura de la aplicación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+La aplicación está estructurada de la siguiente manera:
+- Módulo `shared` para los elementos compartidos, incluyendo un componente `login` y la importación del botón de Primeng.
+- Módulo `Home` con la funcionalidad principal, incluyendo un servicio para las peticiones a la API de Unsplash, una directiva personalizada para aplicar estilos a las imágenes, un componente `body` para imprimir las cards de las fotos y un componente `card` para estructurar cada imagen.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+La aplicación utiliza un `Subject` para almacenar la data de las fotos y el componente `body` se oculta o muestra en base a la presencia o ausencia de datos con un `ngIf`. El botón en el componente `card` refresca el array de fotos de forma aleatoria.

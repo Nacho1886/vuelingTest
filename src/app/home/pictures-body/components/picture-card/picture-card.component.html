@@ -1,10 +1,10 @@
-<article class="flex justify-content-end relative">
-        <img class="w-full h-auto" [src]="picture.urls.thumb">
+<article class="flex relative">
+        <img classDistributor [index]="numberForClass" class="w-full  mb-3 border-round-lg shadow-5" [src]="picture.urls.small">
         <div class="absolute bottom-0 text-white mx-2">
-            <h4>
+            <h4 class="m-0">
                 {{picture.user.name}}
             </h4>
-            <h5>
+            <h5 class="mt-0">
                 {{picture.alt_description}}
             </h5>
         </div>
