@@ -12,7 +12,11 @@ Para levantar el proyecto, es necesario tener Angular Cli instalado de manera gl
 ```
 npm install -g @angular/cli
 ```
-Luego, ejecutar el siguiente comando:
+Instalar todas las dependencias:
+```
+npm install
+```
+Y luego, ejecutar el siguiente comando:
 ```
 ng serve -o
 ```

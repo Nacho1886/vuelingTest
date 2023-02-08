@@ -23,3 +23,7 @@ h5 {
 .size4 {
     height: 219.9px;
 }
+
+@media screen and (max-width: 576px) {
+    .size1, .size2, .size3, .size4 {height: auto;}
+}

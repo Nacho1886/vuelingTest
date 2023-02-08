@@ -5,3 +5,9 @@
 .formatCard {
     display: grid;
 }
+
+@media screen and (max-width: 576px) {
+    .container {
+        column-count: 1;
+    }
+}
